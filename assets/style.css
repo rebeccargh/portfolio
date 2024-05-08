@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
 @font-face {
 	font-family: 'Wildest Dreams';
-	src: url('../portolio/assets/WildestDreams.otf');
+	src: url('../portfolio/assets/WildestDreams.otf') format('otf');
+	font-weight: normal;
+    font-style: normal;
 }
 
 :root {
