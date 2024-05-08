@@ -21,6 +21,12 @@ html {
 	scroll-behavior: smooth;
 }
 
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 body{
 	color: var(--color);
 	font-family: 'Schibsted Grotek';
@@ -87,7 +93,7 @@ li:hover {
 	text-align: center;
 	padding-top: calc(var(--gutter)*6);
 	padding-bottom: calc(var(--gutter)*6);
-	position: relative;
+	position: absolute;
 	top: 10vh;
 	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
 	z-index: 1;
@@ -110,7 +116,7 @@ li:hover {
 	padding-left: 30%;
 	padding-top: calc(var(--gutter)*10);
 	padding-bottom: calc(var(--gutter)*10);
-	position: absolute;
+	position: relative;
 	top: 8vh;
 	left: 10vw;
 	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
@@ -147,10 +153,16 @@ main {
 #projects {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	height: fit-content;
+	padding-bottom: calc(var(--gutter)*8);
 }
 
 .projectItem img {
 	max-width: 600px;
+}
+
+.linkImages img {
+	width: 32px;
 }
 
 .tags {
@@ -171,6 +183,9 @@ main {
 footer {
 	background-color: var(--color);
 	color: var(--background-color);
-	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: relative;
 	bottom: 0;
 }
