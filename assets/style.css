@@ -155,23 +155,40 @@ li:hover {
 main {
 	position: relative;
 	top: 20vh;
+	margin-left: 8vw;
+	margin-right: 8vw;
 }
 
 .sectionHeader {
 	font-family: 'Wildest Dreams', 'Josefin Sans';
 	font-weight: 600;
 	font-size: calc(var(--font-size)*2.5);
+	padding-top: calc(var(--gutter)*2);
 }
 
 #projects {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: calc(var(--gutter)*12);
+	row-gap: calc(var(--gutter)*8);
+	justify-content: center;
 	height: fit-content;
 	padding-bottom: calc(var(--gutter)*8);
 }
 
+.projectItem {
+	transition: 0.5s;
+	background-color: var(--background-color);
+}
+
+.projectItem:hover {
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+
 .projectItem img {
-	max-width: 600px;
+	width: 30vw;
 }
 
 .linkImages img {
