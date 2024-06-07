@@ -95,13 +95,71 @@ li:hover {
 
 button {
 	background: var(--highlight-color);
+	font-size: calc(var(--font-size)*1.4);
+	font-family: 'Wildest Dreams', 'Josefin Sans';
+	display: flex;
+	column-gap: calc(var(--gutter)*2);
+	align-items: center;
 	padding-top: calc(var(--gutter)*1);
 	padding-bottom: calc(var(--gutter)*1);
 	padding-left: calc(var(--gutter)*2);
 	padding-right: calc(var(--gutter)*2);
-	border-radius: 10%;
+	margin-top: calc(var(--gutter)*4);
+	margin-bottom: calc(var(--gutter)*4);
+	border-radius: 0.5em;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+	transition: 0.2s ease;
 }
 
+button:hover {
+	background: var(--color);
+	color: var(--background-color);
+	font-weight: 600;
+	transition: 0.2s ease;
+}
+
+footer {
+	background-color: var(--color);
+	color: var(--background-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: calc(var(--gutter)*3);
+	padding-right: calc(var(--gutter)*3);
+	padding-top: var(--gutter);
+	padding-bottom: var(--gutter);
+	width: 100%;
+	position: relative;
+	bottom: 0;
+}
+
+/* ELEMENTS */
+
+.linkImages {
+	display: flex;
+	justify-content: center;
+	column-gap: calc(var(--gutter)*4);
+}
+
+.sectionHeader {
+	font-family: 'Wildest Dreams', 'Josefin Sans';
+	font-weight: 600;
+	font-size: calc(var(--font-size)*2.5);
+	margin-top: calc(var(--gutter)*3);
+	padding-top: calc(var(--gutter)*2);
+	clear: both;
+}
+
+.linkImages img {
+	width: 24px;
+}
+
+.buttonNav {
+	display: flex;
+	margin: auto;
+}
+
+/* HOME PAGE */
 
 #hero {
 	width: 60vw;
@@ -129,12 +187,6 @@ button {
 
 #heroName p {
 	padding-bottom: calc(var(--gutter)*2.5);
-}
-
-.linkImages {
-	display: flex;
-	justify-content: center;
-	column-gap: calc(var(--gutter)*4);
 }
 
 #heroIntro {
@@ -169,15 +221,6 @@ button {
 	line-height: 1.5em;
 }
 
-.sectionHeader {
-	font-family: 'Wildest Dreams', 'Josefin Sans';
-	font-weight: 600;
-	font-size: calc(var(--font-size)*2.5);
-	margin-top: calc(var(--gutter)*3);
-	padding-top: calc(var(--gutter)*2);
-	clear: both;
-}
-
 #projects {
 	position: relative;
 	display: flex;
@@ -190,21 +233,17 @@ button {
 }
 
 .projectItem {
-	transition: 0.5s;
+	transition: 0.4s;
 	background-color: var(--background-color);
 }
 
 .projectItem:hover {
 	transform: scale(1.1);
-	transition: 0.5s;
+	transition: 0.4s;
 }
 
 .projectItem img {
 	width: 30vw;
-}
-
-.linkImages img {
-	width: 24px;
 }
 
 .tags {
@@ -222,48 +261,7 @@ button {
 	padding-bottom: calc(var(--gutter)/4);
 }
 
-.projectTitle {
-	/* height: 64vh; */
-	background-color: var(--highlight-color);
-	/* margin-top: calc(var(--gutter)*4); */
-	padding-left: calc(var(--gutter)/4);
-	padding-right: calc(var(--gutter)/4);
-	position: relative;
-	display: flex;
-	justify-content: space-around;
-}
-
-.heroImg {
-	text-align: center;
-	padding: 0;
-	margin: 0;
-	/* position: relative;
-	top: 15%;
-    left: 10%;
-	z-index: 0; */
-}
-
-.heroImg img {
-	max-height: 60vh;
-	/* box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4); */
-}
-
-.projectInfo {
-	width: max-content;
-	background-color: var(--highlight-color);
-	color: var(--color);
-	align-self: center;
-	/* position: relative;
-	top: 12vh;
-	right: -40%;
-	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
-	z-index: 1; */
-}
-
-.caseStudy {
-	margin-top: calc(var(--gutter)*5);
-	padding-top: calc(var(--gutter)*2);
-}
+/* ABOUT PAGE */
 
 .aboutLabel {
 	background-color: var(--highlight-color);
@@ -349,18 +347,66 @@ button {
 	}
 }
 
+/* PROJECTS PAGES */
 
-footer {
-	background-color: var(--color);
-	color: var(--background-color);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-left: calc(var(--gutter)*3);
-	padding-right: calc(var(--gutter)*3);
-	padding-top: var(--gutter);
-	padding-bottom: var(--gutter);
-	width: 100%;
+.caseStudy {
+	margin-top: calc(var(--gutter)*4);
+
+}
+
+.projectTitle {
+	box-shadow: inset 0 0 0 2px var(--color);
+	border-radius: 16px 0px 0px 16px;
+	background-color: var(--highlight-color);
 	position: relative;
-	bottom: 0;
+	display: flex;
+	justify-content: flex-start;
+	padding-right: calc(var(--gutter)*4);
+	margin-left: calc(var(--gutter)*12);
+	margin-right: calc(var(--gutter)*12);
+}
+
+.heroImg {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	/* position: relative;
+	top: 15%;
+    left: 10%;
+	z-index: 0; */
+}
+
+.heroImg img {
+	max-height: 60vh;
+	/* box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4); */
+}
+
+.projectInfo {
+	width: max-content;
+	color: var(--color);
+	align-self: center;
+	padding-left: calc(var(--gutter)*6);
+	/* position: relative;
+	top: 12vh;
+	right: -40%;
+	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
+	z-index: 1; */
+}
+
+.caseStudyIntro {
+	margin-top: calc(var(--gutter)*4);
+	margin-left: calc(var(--gutter)*16);
+	margin-right: calc(var(--gutter)*16);
+	padding-top: calc(var(--gutter)*2);
+	display: flex;
+	align-items: center;
+}
+ 
+.caseStudyIntro > p {
+	max-width: 70ch;
+	line-height: 1.4;
+}
+
+.caseStudyIntro > * {
+	margin-bottom: calc(var(--gutter)*4);
 }
