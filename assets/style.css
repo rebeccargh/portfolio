@@ -15,10 +15,14 @@
 	--subtext: 12pt;
 	--color: #E3DED7;
 	--highlight-color: #27574F;
-	--background-color: #E3DED7;
 	--gutter: 8px;
 	--background-color: #212A29;
 	--gutter: 0.5em;
+}
+
+em {
+	font-weight: 600;
+	font-size: calc(var(--font-size)*1.1);
 }
 
 html {
@@ -36,6 +40,10 @@ body{
 	font-family: 'Schibsted Grotesk';
 	background-color: var(--background-color);
 	position: relative;
+}
+
+main {
+	min-height: 88%;
 }
 
 h1 {
@@ -57,8 +65,8 @@ header {
 	font-family: 'Wildest Dreams', 'Josefin Sans';
 	font-weight: 600;
 	font-size: calc(var(--font-size)*1.25);
-	padding-top: calc(var(--gutter)*1.5);
-	padding-bottom: calc(var(--gutter)*1.5);
+	padding-top: calc(var(--gutter)*1.25);
+	padding-bottom: calc(var(--gutter)*1.25);
 	padding-left: calc(var(--gutter)*3);
 	width: 100vw;
 	display: flex;
@@ -85,6 +93,15 @@ li:hover {
 	transition: 0.2s;
 }
 
+button {
+	background: var(--highlight-color);
+	padding-top: calc(var(--gutter)*1);
+	padding-bottom: calc(var(--gutter)*1);
+	padding-left: calc(var(--gutter)*2);
+	padding-right: calc(var(--gutter)*2);
+	border-radius: 10%;
+}
+
 
 #hero {
 	width: 60vw;
@@ -103,9 +120,9 @@ li:hover {
 	padding-top: calc(var(--gutter)*6);
 	padding-bottom: calc(var(--gutter)*6);
 	position: absolute;
-	top: 61%; /* Position #heroName 50% from the top of the #hero container */
-    left: 20%; /* Position #heroName 50% from the left of the #hero container */
-    transform: translate(-50%, -50%); /* Center #heroName both vertically and horizontally */
+	top: 61%;
+    left: 20%;
+    transform: translate(-50%, -50%);
 	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
 	z-index: 1;
 }
@@ -152,18 +169,13 @@ li:hover {
 	line-height: 1.5em;
 }
 
-main {
-	position: relative;
-	top: 20vh;
-	margin-left: 8vw;
-	margin-right: 8vw;
-}
-
 .sectionHeader {
 	font-family: 'Wildest Dreams', 'Josefin Sans';
 	font-weight: 600;
 	font-size: calc(var(--font-size)*2.5);
+	margin-top: calc(var(--gutter)*3);
 	padding-top: calc(var(--gutter)*2);
+	clear: both;
 }
 
 #projects {
@@ -192,7 +204,7 @@ main {
 }
 
 .linkImages img {
-	width: 32px;
+	width: 24px;
 }
 
 .tags {
@@ -210,11 +222,59 @@ main {
 	padding-bottom: calc(var(--gutter)/4);
 }
 
+.projectTitle {
+	/* height: 64vh; */
+	background-color: var(--highlight-color);
+	/* margin-top: calc(var(--gutter)*4); */
+	padding-left: calc(var(--gutter)/4);
+	padding-right: calc(var(--gutter)/4);
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+}
+
+.heroImg {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	/* position: relative;
+	top: 15%;
+    left: 10%;
+	z-index: 0; */
+}
+
+.heroImg img {
+	max-height: 60vh;
+	/* box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4); */
+}
+
+.projectInfo {
+	width: max-content;
+	background-color: var(--highlight-color);
+	color: var(--color);
+	align-self: center;
+	/* position: relative;
+	top: 12vh;
+	right: -40%;
+	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
+	z-index: 1; */
+}
+
+.caseStudy {
+	margin-top: calc(var(--gutter)*5);
+	padding-top: calc(var(--gutter)*2);
+}
+
 footer {
 	background-color: var(--color);
 	color: var(--background-color);
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	padding-left: calc(var(--gutter)*3);
+	padding-right: calc(var(--gutter)*3);
+	padding-top: var(--gutter);
+	padding-bottom: var(--gutter);
 	width: 100%;
 	position: relative;
 	bottom: 0;
