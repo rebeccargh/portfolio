@@ -283,6 +283,7 @@ button {
 	color: var(--background-color);
 	margin: calc(var(--gutter)*6);
 	padding: calc(var(--gutter)*6);
+	padding-top: calc(var(--gutter)*8);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
