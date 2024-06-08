@@ -139,6 +139,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	column-gap: calc(var(--gutter)*4);
+	max-height: 24px;
 }
 
 .sectionHeader {
@@ -148,6 +149,12 @@ footer {
 	margin-top: calc(var(--gutter)*3);
 	padding-top: calc(var(--gutter)*2);
 	clear: both;
+}
+
+@media screen and (max-width:900px) {
+	.sectionHeader {
+		margin-top: calc(var(--gutter)*6);
+	}
 }
 
 .linkImages img {
@@ -162,7 +169,7 @@ footer {
 /* HOME PAGE */
 
 #hero {
-	width: 60vw;
+	/* width: 60vw; */
 	margin: auto;
 	display: flex;
     justify-content: center;
@@ -171,18 +178,32 @@ footer {
 }
 
 #heroName {
-	width: 20vw;
+	width: 70vw;
 	min-width: 300px;
 	background-color: var(--highlight-color);
 	text-align: center;
-	padding-top: calc(var(--gutter)*6);
-	padding-bottom: calc(var(--gutter)*6);
+	padding-left: calc(var(--gutter)*6);
+	padding-right: calc(var(--gutter)*6);
+	padding-bottom: calc(var(--gutter)*4);
+	padding-top: calc(var(--gutter)*4);
 	position: absolute;
-	top: 61%;
-    left: 20%;
-    transform: translate(-50%, -50%);
+	top: 4%;
+	margin: auto;
 	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
 	z-index: 1;
+}
+
+@media screen and (max-width:900px) {
+		.mobileLayout > h2::before {
+		content: " | ";
+	}
+	.mobileLayout {
+		display: flex;
+		align-content: center;
+	}
+	#heroName img {
+		margin-bottom: calc(var(--gutter)*4);
+	}
 }
 
 #heroName p {
@@ -190,15 +211,15 @@ footer {
 }
 
 #heroIntro {
-	width: 50vw;
+	width: 80vw;
 	background-color: var(--color);
 	color: var(--background-color);
-	padding-left: 25%;
-	padding-top: calc(var(--gutter)*10);
+	padding-left: calc(var(--gutter)*8);
+	padding-right: calc(var(--gutter)*8);
+	padding-top: calc(var(--gutter)*56);
 	padding-bottom: calc(var(--gutter)*10);
 	position: relative;
-	top: 8vh;
-	left: 10%;
+	top: 16vh;
 	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
 	z-index: 0;
 }
@@ -206,12 +227,12 @@ footer {
 .hello {
 	font-family: 'Wildest Dreams', 'Josefin Sans';
 	font-weight: 600;
-	font-size: calc(var(--font-size)*4);
+	font-size: calc(var(--font-size)*3);
 	padding-bottom: calc(var(--gutter)/2);
 }
 
 .mission {
-	font-size: calc(var(--font-size)*1.5);
+	font-size: calc(var(--font-size)*1.2);
 	font-weight: 600;
 	padding-bottom: calc(var(--gutter)*2);
 }
@@ -219,6 +240,12 @@ footer {
 #heroIntro p {
 	width: 30vw;
 	line-height: 1.5em;
+}
+
+@media screen and (max-width:900px) {
+	#heroIntro p {
+		width: 60vw;
+	}
 }
 
 #projects {
@@ -259,6 +286,54 @@ footer {
 	padding-right: calc(var(--gutter)*1.5);
 	padding-top: calc(var(--gutter)/4);
 	padding-bottom: calc(var(--gutter)/4);
+}
+
+@media screen and (min-width: 900px) {
+	#hero {
+		width: 60vw;
+	}	
+	#heroName {
+		width: 20vw;
+		min-width: 300px;
+		text-align: center;
+		padding-top: calc(var(--gutter)*6);
+		padding-bottom: calc(var(--gutter)*6);
+		position: absolute;
+		top: 61%;
+		left: 20%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+	#heroIntro {
+		width: 60vw;
+		padding-left: 42%;
+		padding-top: calc(var(--gutter)*10);
+		padding-bottom: calc(var(--gutter)*10);
+		position: relative;
+		top: 10vh;
+		left: 10%;
+		z-index: 0;
+	}
+	.hello {
+		font-family: 'Wildest Dreams', 'Josefin Sans';
+		font-weight: 600;
+		font-size: calc(var(--font-size)*4);
+		padding-bottom: calc(var(--gutter)/2);
+	}
+	.mission {
+		font-size: calc(var(--font-size)*1.5);
+		font-weight: 600;
+		padding-bottom: calc(var(--gutter)*2);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#heroIntro {
+		width: 50vw;
+		padding-left: 25%;
+		top: 8vh;
+		left: 10%;
+	}
 }
 
 /* ABOUT PAGE */
