@@ -35,7 +35,7 @@ html, body {
 	padding: 0;
 }
 
-body{
+body {
 	color: var(--color);
 	font-family: 'Schibsted Grotesk';
 	background-color: var(--background-color);
@@ -426,7 +426,6 @@ footer {
 
 .caseStudy {
 	margin-top: calc(var(--gutter)*4);
-
 }
 
 .projectTitle {
@@ -442,7 +441,6 @@ footer {
 }
 
 .heroImg {
-	text-align: center;
 	padding: 0;
 	margin: 0;
 	/* position: relative;
@@ -457,7 +455,7 @@ footer {
 }
 
 .projectInfo {
-	width: max-content;
+	width: 50%;
 	color: var(--color);
 	align-self: center;
 	padding-left: calc(var(--gutter)*6);
@@ -484,4 +482,8 @@ footer {
 
 .caseStudyIntro > * {
 	margin-bottom: calc(var(--gutter)*4);
+}
+
+.strIntro {
+	padding-top: calc(var(--gutter)*4);
 }
