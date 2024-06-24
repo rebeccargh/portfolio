@@ -311,9 +311,9 @@ footer {
 	.mobileLayout h2 {
 		font-size: calc(var(--font-size)*1.25);
 	}
-		#heroName p {
-			font-size: calc(var(--font-size)*1);
-		}
+	#heroName p {
+		font-size: calc(var(--font-size)*1);
+	}
 }
 
 #heroIntro {
@@ -397,6 +397,13 @@ footer {
 .projectItem img, div, h3 {
 	padding-top: calc(var(--gutter)*1);
 }
+
+@media screen and (max-width:900px) {
+	div .mobileLayout {
+		padding-top: calc(var(--gutter)*3);
+	}
+}
+
 
 .tags {
 	display: flex;
