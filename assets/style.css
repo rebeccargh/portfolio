@@ -282,25 +282,38 @@ footer {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		max-width: 80vw;
 	}
 	.mobileLayout h1 {
-		font-size: calc(var(--font-size)*1.4);
+		font-size: calc(var(--font-size)*1.25);
 		border-right: 2px solid var(--background-color);
 		padding-right: var(--gutter);
 		align-self: center;
 	}
 	.mobileLayout h2 {
-		margin-top: calc(var(--gutter)*1);
+		margin-top: calc(var(--gutter)*0.8);
 		margin-left: var(--gutter);
 		font-size: calc(var(--font-size)*1);
 		align-self: center;
 	}
 	#heroName p {
-		font-size: calc(var(--font-size)*0.9);
+		font-size: calc(var(--font-size)*0.7);
 	}
-	#heroName img {
+	#heroName .linkImages {
 		margin-bottom: calc(var(--gutter)*4);
 	}
+}
+
+@media screen and (min-width:600px) {
+	.mobileLayout h1 {
+		font-size: calc(var(--font-size)*1.5);
+	}
+	.mobileLayout h2 {
+		font-size: calc(var(--font-size)*1.25);
+	}
+		#heroName p {
+			font-size: calc(var(--font-size)*1);
+		}
 }
 
 #heroIntro {
@@ -312,7 +325,7 @@ footer {
 	color: var(--background-color);
 	padding-left: calc(var(--gutter)*8);
 	padding-right: calc(var(--gutter)*8);
-	padding-top: calc(var(--gutter)*56);
+	padding-top: calc(var(--gutter)*48);
 	padding-bottom: calc(var(--gutter)*6);
 	position: relative;
 	top: 22vh;
