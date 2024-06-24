@@ -152,7 +152,14 @@ button:hover {
 
 .temp {
 	font-size: calc(var(--font-size)*1.2);
-	padding-left: calc(var(--gutter)* 2);
+	padding-left: calc(var(--gutter)*2);
+}
+
+@media screen and (max-width:900px) {
+	.temp {
+		padding-left: calc(var(--gutter)*4);
+		padding-right: calc(var(--gutter)*4);
+	}
 }
 
 .temp a {
@@ -340,10 +347,16 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	column-gap: calc(var(--gutter)*12);
-	row-gap: calc(var(--gutter)*8);
+	row-gap: calc(var(--gutter)*4);
 	justify-content: center;
 	height: fit-content;
 	padding-bottom: calc(var(--gutter)*8);
+}
+
+@media screen and (min-width:900px) {
+	#projects {
+		row-gap: calc(var(--gutter)*8);
+	}
 }
 
 #projects, #ProjectsHeader {
