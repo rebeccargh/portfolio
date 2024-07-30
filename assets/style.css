@@ -386,8 +386,8 @@ footer {
 }
 
 .projectItem:hover {
-	transform: scale(1.1);
-	transition: 0.4s;
+	transform: scale(1.027);
+	transition: 0.3s;
 }
 
 .projectItem img {
