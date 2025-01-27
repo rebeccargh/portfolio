@@ -246,6 +246,7 @@ footer {
 #hero {
 	/* width: 60vw; */
 	margin: auto;
+	padding-bottom: calc(var(--gutter)*2);
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -266,7 +267,7 @@ footer {
 	padding-bottom: calc(var(--gutter)*4);
 	padding-top: calc(var(--gutter)*4);
 	position: absolute;
-	top: 4%;
+	top: 3%;
 	margin: auto;
 	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
 	z-index: 1;
@@ -328,7 +329,7 @@ footer {
 	padding-top: calc(var(--gutter)*48);
 	padding-bottom: calc(var(--gutter)*6);
 	position: relative;
-	top: 22vh;
+	top: 18vh;
 	box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
 	z-index: 0;
 }
@@ -431,7 +432,7 @@ footer {
 		padding-top: calc(var(--gutter)*6);
 		padding-bottom: calc(var(--gutter)*6);
 		position: absolute;
-		top: 61%;
+		top: 60%;
 		left: 20%;
 		transform: translate(-50%, -50%);
 		z-index: 1;
@@ -442,7 +443,7 @@ footer {
 		padding-top: calc(var(--gutter)*10);
 		padding-bottom: calc(var(--gutter)*10);
 		position: relative;
-		top: 10vh;
+		top: 8vh;
 		left: 10%;
 		z-index: 0;
 	}
@@ -466,7 +467,7 @@ footer {
 	#heroIntro {
 		width: 50vw;
 		padding-left: 25%;
-		top: 8vh;
+		top: 6vh;
 		left: 10%;
 	}
 }
